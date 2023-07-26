@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signing In...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("https://e0.pxfuel.com/wallpapers/4/453/desktop-wallpaper-all-world-flag-flags-of-the-world-all-country-flags-flag-laos-flag.jpg") no-repeat center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f6fa; /* Faint blue-grey as a fallback for unsupported browsers */
+        }
+
+        .background-image {
+            /* The image used */
+            background-image: url("https://e0.pxfuel.com/wallpapers/4/453/desktop-wallpaper-all-world-flag-flags-of-the-world-all-country-flags-flag-laos-flag.jpg");
+
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1; /* Set the background image behind other elements */
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: lightblue; /* A light blue-grey color with opacity for the form background */
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #007bff; /* Primary blue */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .form-container a {
+            color: #333;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="form-container">
+        <h1 style="margin-bottom: 30px; color: #333;">Signing In...</h1>
+        <form action="/signin" method="POST">
+            <div>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div> 
+                <input type="submit">
+            </div>
+        </form>
+        <br>
+        <a href="/signup">Don't have an account?</a>
+    </div>
+</body>
+</html>
